@@ -2,3 +2,9 @@
   background: url(./assets/wallpaper-bg.jpg) no-repeat center;
   background-size: cover;
 }
+
+/* phone */
+.phone {
+  background: url(./assets/ph-bg.png) no-repeat center;
+  background-size: cover;
+}
