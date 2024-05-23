@@ -1,0 +1,9 @@
+.wrapper{
+    background: url(./assets/bg-w.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.phone{
+    background: url(./assets/bg-p.jpg) no-repeat center;
+    background-size: cover;
+}
