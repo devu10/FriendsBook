@@ -8,3 +8,61 @@
   background: url(./assets/ph-bg.png) no-repeat center;
   background-size: cover;
 }
+
+.phone::-webkit-scrollbar {
+  display: none;
+}
+
+.slider {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+  background: radial-gradient(rgba(151, 243, 4, 0.87), rgb(24, 24, 3));
+}
+.slider::-moz-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+  background: radial-gradient(rgba(151, 243, 4, 0.87), rgb(24, 24, 3));
+}
+
+#label {
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+
+  animation: slideAnimation 2s ease-in-out infinite;
+}
+
+@keyframes slideAnimation {
+  0%,
+  100% {
+    color: black;
+    filter: drop-shadow(0 0 10px purple);
+  }
+  50% {
+    color: purple;
+    filter: drop-shadow(0 0 10px purple);
+  }
+}
