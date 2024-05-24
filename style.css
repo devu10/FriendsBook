@@ -7,3 +7,58 @@
     background: url(./assets/bg-p.jpg) no-repeat center;
     background-size: cover;
 }
+
+.phone::-webkit-scrollbar{
+    display: none;
+}
+
+.slider{
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    opacity: 0.7;
+
+    transition: opacity 0.2s;
+}
+
+.slider:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: radial-gradient(rgb(18, 17, 17),rgba(237, 11, 11, 0.626));
+}
+.slider::-moz-slider-thumb{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: radial-gradient(rgb(18, 17, 17),rgba(237, 11, 11, 0.626));
+}
+
+#label{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    pointer-events: none;
+
+    animation: slideanimation 2s ease-in-out infinite;
+
+}
+
+@keyframes slideanimation{
+    0%, 100% {
+color: rgb(28, 40, 43);
+    }
+
+    50%{
+        color: purple;
+    }
+}

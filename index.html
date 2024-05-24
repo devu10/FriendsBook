@@ -23,15 +23,25 @@
           <i class="bi bi-bar-chart"></i>
           <i class="bi bi-battery-full"></i></div>
       </div>
-      <main class="Activity-Screen h-100">
-        <div class="slide-container p-3 bg-white rounded-4 shadow-lg position-relative" style="top: 400px">
+      <!-- sliding screen -->
+      <main class="Slide-Screen h-100 position-relative p-2" >
+        <div class="slide-container bg-white p-3 rounded-4 shadow position-relative" style="top: 400px">
         <input type="range"
         min="0"
         max="100"
-        value="60"
+        value="0"
         class="slider"
-        id="mySlider"></div>
+        id="mySlider">
+      <label id="label" class="position-absolute text-center" >Slide to unlock</label></div>
       </main>
+      <!-- activity friend list button -->
+      <main class="list-icon bg-dark d-flex justify-content-center align-items-center pt-5" style="height: 660px; display: none">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <i class="bi bi-person-lines-fill text-danger fs-1 bg-white px-2 rounded"></i>
+          <span class="text-white">Friends</span>
+        </div>
+      </main>
+      <!-- activity friend list spinner -->
     </div>
     </div>
     <!-- bootstrap icons -->
