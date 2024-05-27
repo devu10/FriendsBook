@@ -17,6 +17,11 @@ const dispalyAppscreen = () => {
   document.querySelector(".homeScreen").style.display = "none";
   document.querySelector(".appScreen").style.display = "block";
 };
+const dispalyFriendScreen = () => {
+  document.querySelector(".appScreen").remove();
+  document.querySelector(".friendlistScreen").style.display = "block";
+  fetchUsers(apiEp);
+};
 
 const fetchUsers = async (url) => {
   // fetch user
@@ -47,7 +52,6 @@ const fetchUsers = async (url) => {
 
 const displayContactList = (userList) => {
   document.getElementById("list").style.display = "block";
-  console.log(userList);
 
   let str = "";
 
@@ -131,9 +135,9 @@ const displayContactList = (userList) => {
   });
 
   document.getElementById("userAccordion").innerHTML = str;
-};
 
-fetchUsers(apiEp);
+  document.getElementById("userCount").innerText = userList.length;
+};
 
 //search
 
