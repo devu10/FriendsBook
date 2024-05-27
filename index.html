@@ -39,7 +39,10 @@
           </div>
         </div>
         <!-- activity screen -->
-        <main class="homeScreen h-100 p-2 position-relative">
+        <main
+          class="homeScreen h-100 p-2 position-relative"
+          style="display: none"
+        >
           <div
             class="slide-container bg-white p-3 rounded-4 shadow position-relative"
             style="top: 400px"
@@ -68,6 +71,43 @@
                 class="bi bi-person-rolodex text-danger fs-1 bg-white rounded px-2"
               ></i>
               <span class="text-white">Friends</span>
+            </div>
+          </div>
+        </main>
+
+        <!-- Friend list -->
+        <main class="friendlistScreen" style="height: 90%">
+          <div class="friendListContainer">
+            <!-- tite -->
+            <h2 class="p-2 fw-bolder text-white">Friends</h2>
+
+            <!-- search -->
+            <div class="header mt-2 p-2 position-relative">
+              <i
+                class="bi bi-search position-absolute fs-4 m-1 text-secondary"
+              ></i>
+              <input
+                type="text"
+                id="search"
+                class="form-control rounded-pill"
+                placeholder="Search Friends"
+              />
+            </div>
+
+            <!-- spinner -->
+            <div class="bg-light w-25 rounded m-auto p-3 showSpinner">
+              <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+
+            <!-- contact list -->
+            <div id="list" class="bg-light pt-2" style="display: none">
+              <div class="p-2">
+                <span id="userCount">some number</span> lists
+              </div>
+
+              <div class="accordion mt-2" id="userAccordion"></div>
             </div>
           </div>
         </main>
