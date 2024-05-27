@@ -101,24 +101,27 @@ const displayContactList = (userList) => {
           ${nam}
         </div>
         <div>
-          <a href="tel:${item.phone[0]}"
-            ><i class="bi bi-phone"></i>654654</a
+          <a href="tel:${item.phone}"
+            ><i class="bi bi-phone"></i>${item.phone}</a
           >
         </div>
         <div>
           <a href="mailto:${item.email}"
-            ><i class="bi bi-envelope"></i>fasf@dfsa.com</a
+            ><i class="bi bi-envelope"></i>${item.email}</a
           >
         </div>
         <div>
           <a
-            href="https://www.google.com/maps/place/${add},${
-      item.location.city + item.location.state + item.location.postcode
+            href="https://www.google.com/maps/place/${
+              item.location.street.number
+            }+${item.location.street.name}+${item.location.city} + ${
+      item.location.state
+    } + ${item.location.postcode}
     }"
             target="_blank"
           >
             <i class="bi bi-globe-central-south-asia"></i
-            >${add}</a
+            >${add} ${item.location.state}</a
           >
         </div>
       </div>
@@ -131,3 +134,15 @@ const displayContactList = (userList) => {
 };
 
 fetchUsers(apiEp);
+
+//search
+
+document.getElementById("search").addEventListener("keyup", (e) => {
+  const { value } = e.target;
+  // console.log(value);
+  const filteredUser = userList.filter((itm) => {
+    const name = (itm.name.first + " " + itm.name.last).toLowerCase();
+    return name.includes(value.toLowerCase());
+  });
+  displayContactList(filteredUser);
+});
