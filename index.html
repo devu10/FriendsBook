@@ -102,71 +102,12 @@
             </div>
 
             <!-- contact list -->
-            <div id="list" class="bg-light pt-2">
-              <div class=""><span id="userCount">some number</span> lists</div>
-
-              <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseThree"
-                      aria-expanded="false"
-                      aria-controls="collapseThree"
-                    >
-                      <img
-                        src="https://randomuser.me/api/portraits/thumb/men/75.jpg"
-                        alt="some"
-                        width="50px"
-                        class="rounded-circle"
-                      />
-                      <div class="ms-2">
-                        <div class="fw-bolder">Dev dd</div>
-                        <small>1 pitt st sydnery</small>
-                      </div>
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseThree"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#accordionExample"
-                  >
-                    <div
-                      class="accordion-body d-flex flex-column align-items-center"
-                    >
-                      <img
-                        src="https://randomuser.me/api/portraits/thumb/men/75.jpg"
-                        alt="some"
-                        width="150px"
-                        class="rounded-circle"
-                      />
-                      <div>
-                        <div class="fw-bolder">
-                          <i class="bi bi-person"></i>
-                          swek ss
-                        </div>
-                        <div>
-                          <a href="tel:546465"></a
-                          ><i class="bi bi-phone"></i>654654
-                        </div>
-                        <div>
-                          <a href="mailto:fsaf@dfs.com"></a
-                          ><i class="bi bi-envelope"></i>fasf@dfsa.com
-                        </div>
-                        <div>
-                          <a
-                            href="https://www.google.com/maps/place/99+George+St,+The+Rocks+NSW+2000"
-                            target="_blank"
-                          ></a>
-                          <i class="bi bi-globe-central-south-asia"></i>sydney
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div id="list" class="bg-light pt-2" style="display: none">
+              <div class="p-2">
+                <span id="userCount">some number</span> lists
               </div>
+
+              <div class="accordion mt-2" id="userAccordion"></div>
             </div>
           </div>
         </main>
