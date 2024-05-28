@@ -1,5 +1,6 @@
 const apiEp = "https://randomuser.me/api/?results=2";
 const slider = document.getElementById("mySlider");
+const gender = "";
 let userList = [];
 slider.addEventListener("change", (e) => {
   const { value } = e.target;
@@ -42,6 +43,7 @@ const fetchUsers = async (url) => {
   // async await
   const response = await fetch(url);
   const data = await response.json();
+  console.log(data);
   userList = data.results;
 
   // hide the spinner

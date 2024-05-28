@@ -101,7 +101,36 @@
 
             <!-- contact list -->
             <div id="list" class="bg-light pt-2" style="display: none">
-              <div class="p-2"><span id="userCount"></span> Friend lists</div>
+              <div class="p-2">
+                <span id="userCount"></span> Friend lists
+                <div
+                  class="btn-group-horizontal"
+                  role="group"
+                  aria-label="Vertical radio toggle button group"
+                >
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="vbtn-radio"
+                    id="vbtn-radio1"
+                    autocomplete="off"
+                    checked
+                  />
+                  <label class="btn btn-outline-danger" for="vbtn-radio1"
+                    >Male</label
+                  >
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="vbtn-radio"
+                    id="vbtn-radio2"
+                    autocomplete="off"
+                  />
+                  <label class="btn btn-outline-danger" for="vbtn-radio2"
+                    >Female</label
+                  >
+                </div>
+              </div>
 
               <div class="accordion mt-2" id="userAccordion"></div>
             </div>
