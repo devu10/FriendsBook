@@ -154,5 +154,21 @@ document.getElementById("search").addEventListener("keyup", (e) => {
 });
 
 const getGenderFilter = () => {
-  return document.querySelector("input[name='vbtn-radio']:checked").value;
+  const selectedGender = document.querySelector(
+    "input[name='vbtn-radio']:checked"
+  );
+  return selectedGender ? selectedGender.value : "no selection";
 };
+
+//gender filte
+
+document.querySelectorAll('input[name="vbtn-radio"]').forEach((radio) => {
+  radio.addEventListener("change", () => {
+    const gender = getGenderFilter();
+    console.log(gender);
+    const genderFiltered = userList.filter((itm) => {
+      return gender === all || itm.gender === gender;
+    });
+    displayContactList(genderFiltered);
+  });
+});
