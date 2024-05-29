@@ -152,3 +152,7 @@ document.getElementById("search").addEventListener("keyup", (e) => {
   });
   displayContactList(filteredUser);
 });
+
+const getGenderFilter = () => {
+  return document.querySelector("input[name='vbtn-radio']:checked").value;
+};
