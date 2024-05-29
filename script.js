@@ -164,9 +164,10 @@ const getGenderFilter = () => {
 
 document.querySelectorAll('input[name="vbtn-radio"]').forEach((radio) => {
   radio.addEventListener("change", () => {
-    console.log(getGenderFilter());
+    const gender = getGenderFilter();
+    console.log(gender);
     const genderFiltered = userList.filter((itm) => {
-      return itm.gender.includes(getGenderFilter());
+      return gender === all || itm.gender === gender;
     });
     displayContactList(genderFiltered);
   });
