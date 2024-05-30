@@ -167,7 +167,7 @@ document.querySelectorAll('input[name="vbtn-radio"]').forEach((radio) => {
     const gender = getGenderFilter();
     console.log(gender);
     const genderFiltered = userList.filter((itm) => {
-      return gender === all || itm.gender === gender;
+      return gender === "all" || itm.gender === gender;
     });
     displayContactList(genderFiltered);
   });
